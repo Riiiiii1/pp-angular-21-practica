@@ -1,0 +1,13 @@
+<h1> Students Page </h1>
+<p> Selecciona el estudiante para ver su detalle. </p>
+
+<ul>
+    @for(estudiante of students(); track estudiante.id){
+        <li>{{estudiante.name}}</li>
+       
+    }@empty{
+        <li>
+            LISTADO VACIO
+        </li>
+    }
+</ul>
