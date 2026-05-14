@@ -3,7 +3,9 @@
 
 <ul>
     @for(estudiante of students(); track estudiante.id){
-        <li>{{estudiante.name}}</li>
+        <li> <a [routerLink]="['/students',estudiante.id]">
+            {{estudiante.name}}
+        </a></li>
        
     }@empty{
         <li>

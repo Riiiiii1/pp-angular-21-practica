@@ -1,13 +1,54 @@
 <footer class="footer">
 
-    <h2>{{ title() | uppercase }}</h2>
+    <div class="footer-glow"></div>
 
-    <p>{{ message() | lowercase }}</p>
+    <div class="footer-top">
 
-    <p>Fecha: {{ today() | date:'shortDate' }}</p>
+        <h2>{{ title() | uppercase }}</h2>
 
-    <p>Total: {{ price() | currency }}</p>
+        <span class="badge">ANGULAR 20</span>
 
-    <p>{{ percent() | percent }}</p>
+    </div>
+
+    <p class="message">
+        {{ message() | lowercase }}
+    </p>
+
+    <div class="footer-info">
+
+        <div class="card">
+            <span class="label">📅 Fecha</span>
+            <p>{{ today() | date:'fullDate' }}</p>
+        </div>
+
+        <div class="card">
+            <span class="label">💰 Total</span>
+            <p>{{ price() | currency }}</p>
+        </div>
+
+        <div class="card">
+            <span class="label">📈 Progreso</span>
+            <p>{{ percent() | percent }}</p>
+        </div>
+
+    </div>
+
+    <div class="footer-socials">
+
+        <button>🔥 GitHub</button>
+        <button>⚡ LinkedIn</button>
+        <button>🚀 Portfolio</button>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>© 2026 Todos los derechos reservados</p>
+
+        <p class="mini">
+            Diseñado con Angular + Signals
+        </p>
+
+    </div>
 
 </footer>
