@@ -6,7 +6,7 @@ ActivatedRoute
   selector: 'app-students-detail-page',
   imports: [RouterLink],
   templateUrl: './students-detail-page.html',
-  styles: ``,
+  styleUrl: './students-detail-page.css'
 })
 export class StudentsDetailPage {
   // Permite leer los parametros de la URL actual

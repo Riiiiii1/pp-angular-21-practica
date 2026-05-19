@@ -1,53 +1,50 @@
-<footer class="footer">
+<footer class="border-t border-slate-200 bg-white p-6 mt-10">
 
-    <div class="footer-glow"></div>
+    <div class="flex flex-col gap-5 max-w-4xl mx-auto">
 
-    <div class="footer-top">
+        <div>
+            <h2 class="text-2xl font-bold text-slate-800">
+                {{ title() | uppercase }}
+            </h2>
 
-        <h2>{{ title() | uppercase }}</h2>
-
-        <span class="badge">ANGULAR 20</span>
-
-    </div>
-
-    <p class="message">
-        {{ message() | lowercase }}
-    </p>
-
-    <div class="footer-info">
-
-        <div class="card">
-            <span class="label">📅 Fecha</span>
-            <p>{{ today() | date:'fullDate' }}</p>
+            <p class="text-slate-500 mt-1">
+                {{ message() | lowercase }}
+            </p>
         </div>
 
-        <div class="card">
-            <span class="label">💰 Total</span>
-            <p>{{ price() | currency }}</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+            <div class="border border-slate-200 rounded-md p-4 bg-slate-50">
+                <span class="text-sm text-slate-500">
+                    Fecha
+                </span>
+
+                <p class="font-medium text-slate-800 mt-1">
+                    {{ today() | date:'fullDate' }}
+                </p>
+            </div>
+
+            <div class="border border-slate-200 rounded-md p-4 bg-slate-50">
+                <span class="text-sm text-slate-500">
+                    Total
+                </span>
+
+                <p class="font-medium text-slate-800 mt-1">
+                    {{ price() | currency }}
+                </p>
+            </div>
+
+            <div class="border border-slate-200 rounded-md p-4 bg-slate-50">
+                <span class="text-sm text-slate-500">
+                    Progreso
+                </span>
+
+                <p class="font-medium text-slate-800 mt-1">
+                    {{ percent() | percent }}
+                </p>
+            </div>
+
         </div>
-
-        <div class="card">
-            <span class="label">📈 Progreso</span>
-            <p>{{ percent() | percent }}</p>
-        </div>
-
-    </div>
-
-    <div class="footer-socials">
-
-        <button>🔥 GitHub</button>
-        <button>⚡ LinkedIn</button>
-        <button>🚀 Portfolio</button>
-
-    </div>
-
-    <div class="footer-bottom">
-
-        <p>© 2026 Todos los derechos reservados</p>
-
-        <p class="mini">
-            Diseñado con Angular + Signals
-        </p>
 
     </div>
 

@@ -1,0 +1,13 @@
+/* Apila el hero y el botón verticalmente con espacio entre ellos */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Centra el botón horizontalmente */
+.home-page__actions {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}

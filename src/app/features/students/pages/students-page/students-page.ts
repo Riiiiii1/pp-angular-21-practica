@@ -5,7 +5,7 @@ import { RouterLink } from "@angular/router";
   selector: 'app-students-page',
   imports: [RouterLink],
   templateUrl: './students-page.html',
-  styles: ``,
+  styleUrl: './students-page.css'
 })
 export class StudentsPage {
   readonly students = signal ([
