@@ -34,3 +34,30 @@ Layout con `grid-rows-3 grid-flow-col` donde un item usa `row-span-3` para ocupa
 ![Flex dirección columna y fila](public/flex.jpeg)
 
 Layout con `flex flex-col md:flex-row` que demuestra el enfoque mobile-first de Tailwind. En pantallas pequeñas los items se apilan verticalmente; en pantallas medianas (`md:`) se distribuyen en fila horizontal. Cada item usa `flex-1` para repartir el espacio disponible de forma equitativa.
+
+
+
+
+## PRACTICA 5 A
+
+![Errores del Formulario de Login](public/crear_cuenta_errores.jpeg)
+
+![Errorer Email asincronico](public/crear_cuenta_error_asincronico.jpeg)
+
+## PRACTICA 5 B
+
+![Formulario de Profile](public/editar_info_personal.jpeg)
+
+![Errores del Formulario de Profile](public/editar_info_p_errores.jpeg)
+
+## PRACTICA 5 C
+
+![Configuracion vacia](public/conf_vacio.jpeg)
+
+![Configuracion con errores](public/conf_errores.jpeg)
+
+![Configuracion con datos](public/conf_completo.jpeg)
+
+
+![Configuracion capturada](public/conf_capturado.jpeg)
+

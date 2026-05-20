@@ -23,6 +23,12 @@
                 @if (email?.touched && email?.hasError('email')){
                     <p class="text-sm text-red-600"> Email Invalido. Intente otra vez</p>
                 }
+                @if (email?.status === 'PENDING') {
+                <p class="text-xs text-slate-500">Verificando disponibilidad...</p>
+                }
+                @if (email?.touched && email?.hasError('emailTaken')) {
+                <p class="text-xs text-red-600">Este email ya está registrado</p>
+                }
                 @if (email?.touched && email?.hasError('required')){
                     <p class="text-sm text-red-600"> Email es requerido</p>
                 }
@@ -76,7 +82,7 @@
             </div>
             <button 
                 type="submit" 
-                [disabled]="form.invalid"
+                [disabled]="form.invalid || form.status === 'PENDING'"
                 class="w-full rounded-xl bg-sky-600 px-4 py-3 
                 text-sm font-semibold text-white">
                 Iniciar Sesión
