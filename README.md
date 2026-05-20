@@ -3,13 +3,7 @@
 ![Captura del proyecto](public/captura.jpeg)
 
 
-## Card básica con sombra
 
-![Card básica con sombra](public/captura.jpeg)
-
-Layout base usando `shadow-xl` y `ring-1 ring-slate-200`. Las cards tienen ancho fijo (`w-56`) y se reorganizan automáticamente según el espacio disponible. Es la estructura mínima: sin gradiente, solo sombra prominente para generar jerarquía visual.
-
----
 
 ## Cards con gradiente
 
