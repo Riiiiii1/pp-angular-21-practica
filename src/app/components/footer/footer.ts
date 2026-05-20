@@ -22,7 +22,7 @@ export class Footer {
 
   title = signal('Footer Angular');
 
-  message = signal('ESTE ES MI FOOTER');
+  message = signal('David Esteban Sisa Buestan');
 
   today = signal(new Date());
 
