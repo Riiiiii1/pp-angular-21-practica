@@ -1,45 +1,44 @@
-<footer class="footer">
-  <div>
-    <div>
-      <h2>
-        {{ title() | uppercase }}
-      </h2>
+<footer class="footer sm:footer-horizontal mt-10 border-t border-base-200 bg-base-100 p-10 text-base-content shadow-sm">
 
-      <p>
-        {{ message() | lowercase }}
-      </p>
-    </div>
+  <!-- SECCIÓN 1: INFO PRINCIPAL -->
+  <nav>
+    <h6 class="footer-title">
+      {{ title() | uppercase }}
+    </h6>
 
-    <div>
-      <div>
-        <span>
-          Fecha
-        </span>
+    <p class="text-sm opacity-80">
+      {{ message() | lowercase }}
+    </p>
+  </nav>
 
-        <p>
-          {{ today() | date:'fullDate' }}
-        </p>
-      </div>
+  <!-- SECCIÓN 2: DATOS -->
+  <nav>
+    <h6 class="footer-title">Datos</h6>
 
-      <div>
-        <span>
-          Total
-        </span>
+    <p>
+      <span class="font-semibold">Fecha:</span><br>
+      {{ today() | date:'fullDate' }}
+    </p>
 
-        <p>
-          {{ price() | currency }}
-        </p>
-      </div>
+    <p>
+      <span class="font-semibold">Total:</span><br>
+      {{ price() | currency }}
+    </p>
 
-      <div>
-        <span>
-          Progreso
-        </span>
+    <p>
+      <span class="font-semibold">Progreso:</span><br>
+      {{ percent() | percent }}
+    </p>
+  </nav>
 
-        <p>
-          {{ percent() | percent }}
-        </p>
-      </div>
-    </div>
-  </div>
+  <!-- SECCIÓN 3: NAVEGACIÓN -->
+  <nav>
+    <h6 class="footer-title">Navegación</h6>
+
+    <a class="link link-hover" routerLink="/">Inicio</a>
+    <a class="link link-hover" routerLink="/students">Estudiantes</a>
+    <a class="link link-hover" routerLink="/layouts">Layouts</a>
+    <a class="link link-hover" routerLink="/profile">Perfil</a>
+  </nav>
+
 </footer>
