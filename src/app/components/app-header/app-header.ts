@@ -1,27 +1,25 @@
-import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
-
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { ChangeDetectionStrategy, Component, computed, signal, inject } from '@angular/core';
+import { AuthService } from '../../core/services/auth';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   imports: [RouterLink, RouterLinkActive, UpperCasePipe],
   templateUrl: './app-header.html',
-  styleUrl:"./app-header.css",
+  styleUrl: "./app-header.css",
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppHeader {
-
-
-  readonly brand = signal("PPW Angular")
+  
+  readonly brand = signal("PPW Angular");
   readonly showInfo = signal(false);
 
   readonly toggleLabel = computed(
-    () => (this.showInfo()
-      ? 'Ocultar info' :
-      'Mostrar info'));
+    () => (this.showInfo() ? 'Ocultar info' : 'Mostrar info')
+  );
 
-   toggleInfo() {
+  toggleInfo() {
     this.showInfo.update((value) => !value);
   }
 
@@ -31,9 +29,20 @@ export class AppHeader {
   }
 
   resetBrand(): void {
-    this.brand.set("Nombre reseteado")
+    this.brand.set("Nombre reseteado");
   }
 
- 
+  // --- Integración de Auth ---
+  private authService = inject(AuthService);
+  private router = inject(Router);
 
+  // El signal del servicio: null = no autenticado, User = autenticado.
+  currentUser = this.authService.currentUser;
+
+  logout() {
+    this.authService.logout().subscribe(() => {
+      // Redirige al login despues de cerrar sesion.
+      this.router.navigate(['/login']);
+    });
+  }
 }
