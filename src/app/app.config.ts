@@ -7,15 +7,13 @@ import { getAuth, provideAuth } from '@angular/fire/auth';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCpysKUBlNRkEAbyjQhFRAaskBa4Zp-WO8",
-  authDomain: "nodejestucuentaabierta.firebaseapp.com",
-  projectId: "nodejestucuentaabierta",
-  storageBucket: "nodejestucuentaabierta.firebasestorage.app",
-  messagingSenderId: "752214676355",
-  appId: "1:752214676355:web:9322c03832d12feda2dcb6",
-  measurementId: "G-XQX0WNSNG7"
+  apiKey: "AIzaSyA4Pd4r77AuCXjbiE3bO4zc3ZTem5-mspo",
+  authDomain: "pp-angular-practt.firebaseapp.com",
+  projectId: "pp-angular-practt",
+  storageBucket: "pp-angular-practt.firebasestorage.app",
+  messagingSenderId: "279044982343",
+  appId: "1:279044982343:web:a5cb7c6c2dca99a2edd362"
 };
-
 
 
 
