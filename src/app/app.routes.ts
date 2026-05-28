@@ -10,6 +10,7 @@ import { UiComponentsPage } from './features/ui/pages/ui-components-page/ui-comp
 import { SimpsonsPage } from './features/simpsons/pages/simpsons-page/simpsons-page';
 import { AuthPage } from './features/auth/pages/auth-page/auth-page';
 import { SimpsonDetailPage } from './features/simpsons/pages/simpson-detail-page/simpson-detail-page';
+import { authGuard } from './core/guards/auth-guard';
 export const routes: Routes = [
 
   {
@@ -45,12 +46,14 @@ export const routes: Routes = [
   },
   {
     path: 'simpsons',
-    component: SimpsonsPage
+    component: SimpsonsPage,
+    canActivate: [authGuard]
   },
   { path: 'auth', component: AuthPage },
   {
   path: 'simpsons/:id',
   component: SimpsonDetailPage,
+  canActivate: [authGuard]
 },
   {
     path:'**',
