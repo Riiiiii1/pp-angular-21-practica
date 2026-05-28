@@ -60,4 +60,19 @@ export class AuthPage {
       },
     });
   }
+    // NUEVO: Ejecuta el inicio de sesión con ventana emergente
+  loginWithGoogle() {
+    this.isLoading.set(true);
+    this.errorMessage.set(null);
+    
+    this.authService.loginWithGoogle().subscribe({
+      next: () => {
+        this.router.navigate(['/']);
+      },
+      error: () => {
+        this.errorMessage.set('No se pudo iniciar sesión con Google. Intenta de nuevo.');
+        this.isLoading.set(false);
+      }
+    });
+  }
 }
